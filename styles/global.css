@@ -5,6 +5,8 @@
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
     --brand-color-light:#60A5FA ;
     --brand-color-dark:#1D4ED8 ;
@@ -13,20 +15,20 @@
     --text-color-primary: #F1F5F9;
     --text-color-secondary: #CBD5E1;
     
-    --font-family: 'Archivo', sans-serif ;
-    --h1: 800 24px/135% var(var(--font-family));
-    --h2: 800 16px/140% var(var(--font-family));
-    --h3: 800 14px/140% var(var(--font-family));
-    --text-span: 600 14px/145% var(var(--font-family));
-    --text: 400 16px/160% var(var(--font-family));
-    --text-sm: 400 14px/160% var(var(--font-family));
+    --font-family: "Archivo", sans-serif;
+    --h1: 800 24px/135% var(--font-family);
+    --h2: 800 16px/140% var(--font-family);
+    --h3: 800 14px/140% var(--font-family);
+    --text-span: 600 14px/145% var(--font-family);
+    --text: 400 16px/160% var(--font-family);
+    --text-sm: 400 14px/160% var(--font-family); 
 
 }
 
 body {
     color:  var(--text-color-primary);
     background-color: var(--bg-color);
-    font: var(--text);
+    font-family: var(--text);
 }
 
 a {
@@ -64,4 +66,18 @@ main{
 
 img{
     max-width: 100%;
+}
+
+.content-tag {
+    display: inline-block;
+    background-color: var(--brand-color-dark);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font: 500 10px/1.2 var(--font-family); 
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-color-primary);
+    box-shadow: 0px 4px 16px rgba(2, 6, 23, 0.25);
+
+
 }

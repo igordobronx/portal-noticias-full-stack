@@ -9,6 +9,7 @@
 .card {
     border-radius: 4px;
     position: relative;
+    overflow: hidden;
     
     
     &::before {
@@ -24,5 +25,15 @@
         overflow: hidden;
         top: 50%;
 
+    }
+
+    figcaption {
+        position: absolute; /*deixando em cima da imagem*/
+        bottom: 0;
+        padding: 24px;
+        
+        h2 {
+            margin top: 8px;
+        }
     }
 }
