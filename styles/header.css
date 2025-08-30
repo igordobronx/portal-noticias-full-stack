@@ -28,3 +28,7 @@ div{
     border-inline: none; /*remover laterais*/
     justify-content: space-between;
 }
+
+nav {
+    font-family: var(--font-family);
+}
