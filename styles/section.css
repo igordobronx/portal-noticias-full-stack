@@ -4,104 +4,135 @@ section header {
     font: var(--text-span);
 }
 
-
+/* FEATURED */
 #featured img {
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-    
-
 .card {
     border-radius: 4px;
     position: relative;
     overflow: hidden;
-    
-    
-    &::before {
-        content: "";
-        background: linear-gradient(
-            180deg,
-            transparent 0%,
-            #020617 100%
-
-        );
-        inset: 0;
-        position: absolute;
-        overflow: hidden;
-        top: 50%;
-
-    }
-
-    figcaption {
-        position: absolute; /*deixando em cima da imagem*/
-        bottom: 0;
-        padding: 24px;
-
-        &:has(.text-lg) {
-            padding: 12px;
-        }
-
-        
-        
-        h2 {
-            margin top: 8px;
-        }
-    }
 }
 
+.card::before {
+    content: "";
+    background: linear-gradient(
+        180deg,
+        transparent 0%,
+        #020617 100%
+    );
+    inset: 0;
+    position: absolute;
+    top: 50%;
+}
 
+.card figcaption {
+    position: absolute; /* legenda em cima da imagem */
+    bottom: 0;
+    padding: 24px;
+}
+
+.card figcaption:has(.text-lg) {
+    padding: 12px;
+}
+
+.card figcaption h2 {
+    margin-top: 8px;
+}
+
+/* WEEKLY */
 #weekly {
-
     font-family: var(--font-family);
+    grid-area: weekly;
+}
 
-    img {
-        height: 160px;
-        object-fit: cover;
-        border-radius: 8px;
+#weekly img {
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
-    }
+#weekly header a {
+    justify-self: end;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+}
 
-    header a {
-        justify-self: end;
-        align-items: center;
-        gap: 8px;
+#weekly header a img {
+    width: 16px;
+    height: 16px;
+}
 
-        img {
-            background-image: url(../assets/icons/ArrowRight-hover.svg);
-            width: 16px;
-            height: 16px;
-        }
+#weekly figure {
+    position: relative;
+}
 
-        &:hover span {
-            background-image: url(../assets/icons/ArrowRight-hover.svg);
-        }
-    }
+#weekly figure .content-tag {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+}
 
-    figure {
-        position: relative;
-
-        .content-tag {
-            position:absolute;
-            top: 8px;
-            left: 8px;
-
-
-        }
-
-        p {
-            margin-top: 8px;
-            font-weight: 800;
-        }
-    }
-    
-
+#weekly figure p {
+    margin-top: 8px;
+    font-weight: 800;
 }
 
 #weekly > div {
-        grid-template-columns: repeat(4, 292px);
-        display: grid;
-        gap: 16px;
-    }
+    grid-template-columns: repeat(4, 292px);
+    display: grid;
+    gap: 16px;
+    justify-content: center;
+}
 
+/* AI */
+#ai img {
+    width: 176px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+#ai .grid-flow-col {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    display: grid;
+}
+
+#ai .grid {
+    display:grid;
+    gap: 16px;.
+}
+
+#ai h3 {
+    margin-block: 8px 4px;
+}
+
+
+#featured {
+    grid-area: featured;
+}
+
+#ai {
+    grid-area: ai;
+}
+
+aside {
+    grid-area: aside;
+}
+
+
+#featured { grid-area: featured; }
+#weekly { grid-area: weekly; }
+#ai { grid-area: ai; }
+aside { grid-area: aside; }
+
+#more {
+
+    h3 {
+        margin-top: 8px;
+    }
+}

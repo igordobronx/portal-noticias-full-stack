@@ -14,11 +14,7 @@
 
 
 
-div{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+
 
 
 #secondary {
@@ -31,4 +27,11 @@ div{
 
 nav {
     font-family: var(--font-family);
+}
+
+/* header.css */
+#primary > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
